@@ -25,6 +25,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react-app": "^3.1.2",
     "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.6",
     "css-loader": "^0.28.11",
     "eslint": "^5.0.1",
     "eslint-config-airbnb": "^17.0.0",
@@ -41,6 +42,7 @@
     "promise": "^8.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-transition-group": "^2.5.0",
     "style-loader": "^0.21.0",
     "whatwg-fetch": "^2.0.4"
   },
@@ -149,6 +151,8 @@
       "import/no-cycle": 0,
       "react/no-multi-comp": 0,
       "react/no-did-update-set-state": 0,
+      "react/no-unused-state": 0,
+      "react/no-find-dom-node": 0,
       "semi": [
         "error",
         "never"

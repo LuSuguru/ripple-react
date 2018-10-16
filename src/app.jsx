@@ -1,34 +1,20 @@
 import React, { PureComponent } from 'react'
-import qs from 'querystring'
+import addRipper from './ripple'
 
 import './style.less'
 import './styles/reset.css'
+
+const Button = addRipper(({ children, className = '', ...props }) => (
+  <div className={`button ${className}`} {...props}>{children}</div>))
 
 export default class extends PureComponent {
   state = {
     ceshi: ''
   }
 
-  componentDidMount() {
-    fetch('/api/login/account', {
-      method: "POST",
-      body: qs.stringify({ ceshi: 1 }),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ ceshi: data.text })
-      })
-
-    fetch('/repos/hello.do')
-  }
-
   render() {
-    const { ceshi } = this.state
     return (
-      <div>{ceshi}</div>
+      <Button>确认</Button>
     )
   }
 }
